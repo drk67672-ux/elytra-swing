@@ -55,7 +55,7 @@ public class ElytraSwingClient implements ClientModInitializer {
         if (pendingDelay >= 0) {
             if (pendingDelay == 0) {
                 pendingDelay = -1;
-                if (!cfg.onlyWhileGliding || player.isFallFlying()) {
+                if (!cfg.onlyWhileGliding || player.isGliding()) {
                     if (useRocket(client, player)) lastUseTick = tick;
                 }
             } else {
